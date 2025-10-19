@@ -121,22 +121,7 @@ Cada registro representa una venta única de un producto específico, identifica
 
 ## Interpretación:
 
-Las medias estimadas son precisas y estables, con intervalos estrechos.
-
-El precio_unitario promedio ronda los 3.45, y las ventas por transacción tienen un promedio de 7.35 unidades monetarias.
-
-La dispersión (desviación estándar) indica variabilidad moderada, típica de productos de diferentes precios.
-
-## Resultados globales
-
-La distribución de total_venta muestra asimetría ligera a la derecha, con algunas transacciones de alto valor.
-
-Los cuartiles indican que el 50 % de las ventas se concentran entre 4 y 9 unidades monetarias.
-
-El precio unitario medio sugiere un ticket promedio por producto entre 3 y 4 unidades monetarias.
-
-Los resultados reflejan un comportamiento típico de cafeterías: alta frecuencia de ventas pequeñas con productos económicos y pocas ventas de alto valor.
-
+- Tabla de estadísticas descriptivas:
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -192,6 +177,7 @@ Los resultados reflejan un comportamiento típico de cafeterías: alta frecuenci
   </tbody>
 </table>
 
+- Tabla de intervalos de confianza:
 
 <table border="1" class="dataframe">
   <thead>
@@ -223,3 +209,33 @@ Los resultados reflejan un comportamiento típico de cafeterías: alta frecuenci
     </tr>
   </tbody>
 </table>
+Las medias estimadas son precisas y estables, con intervalos estrechos.
+
+### Cantidad de transacción
+La mayoría de las transacciones son de una sola unidad, lo cual se confirma porque la media, mediana y moda están muy cerca (1.0–1.4).
+La dispersión baja (0.54) indica homogeneidad, es decir, casi todas las compras son pequeñas.
+Solo algunas pocas transacciones son más grandes (lo que explica el rango amplio de 7).
+El intervalo es extremadamente estrecho (sin variación entre los límites), lo que indica muy baja variabilidad y una media estable.
+
+### Precio unitario
+La mayoría de precios se concentran alrededor de 3 unidades monetarias, pero el rango alto (44.2) y la varianza elevada (7.07) muestran alta dispersión y posibles valores atípicos (productos con precios mucho mayores).
+Esto podría indicar un menu con algunos productos de alto valor  (granos de cafe) que sesgan la media hacia arriba.
+El rango de precios es alto (productos entre valores bajos y muy altos), pero la media está estimada con gran precisión, dado que el IC apenas varía 0.03 unidades.
+Esto implica que el tamaño de muestra fue suficientemente grande y que la media (~3.38) es un estimador confiable del precio promedio.
+
+### Total venta
+El total de venta promedio es de 4.69, pero con una gran dispersión (σ = 4.23) similar ala media y un rango enorme (359.2).
+Esto sugiere que, aunque la mayoría de ventas son pequeñas, existen algunas transacciones de alto valor que elevan la media 
+
+El rango de precios es alto (productos entre valores bajos y muy altos), pero la media está estimada con gran precisión, dado que el IC apenas varía 0.03 unidades.
+Esto implica que el tamaño de muestra fue suficientemente grande y que la media (~3.38) es un estimador confiable del precio promedio.
+## Resultados globales
+
+- La distribución de total_venta muestra asimetría ligera a la derecha, con algunas transacciones de alto valor.
+
+- Para las ventas se observa que el rango intercuartil se encuentra entre 3 y 6 unidades monetarias.
+
+- Los resultados reflejan un comportamiento típico de cafeterías: alta frecuencia de ventas pequeñas con productos económicos y pocas ventas de alto valor.
+
+- A pesar de la estabilidad en la media, precio_unitario y total_venta tienen grandes rangos, lo que refleja alta variabilidad entre observaciones individual
+
